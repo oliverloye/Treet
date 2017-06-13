@@ -16,10 +16,10 @@ public class Treet {
     private String mDescription;
     private Date mCreationDate;
 
-    public Treet(String mAuthor, String mDescription, Date mCreationDate) {
-        this.mAuthor = mAuthor;
-        this.mDescription = mDescription;
-        this.mCreationDate = mCreationDate;
+    public Treet(String author, String description, Date creationDate) {
+        mAuthor = author;
+        mDescription = description;
+        mCreationDate = creationDate;
     }
 
     public String getmAuthor() {
@@ -34,6 +34,10 @@ public class Treet {
         return mCreationDate;
     }
 
+    public String[] getWords() {
+        return mDescription.toLowerCase().split("[^\\w#@']+");
+    }
+    
     @Override
     public String toString() {
         return "Treet: " + mDescription + " - @" +mAuthor + ", mCreationDate: " + mCreationDate + '}';
