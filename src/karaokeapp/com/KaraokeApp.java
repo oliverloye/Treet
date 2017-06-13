@@ -20,6 +20,8 @@ public class KaraokeApp {
     public static void main(String[] args) {
         // TODO code application logic here
         Treet treet = new Treet("oliverloye", "This is my tweet", new Date(1421849702000L));
+        Treet secondTreet = new Treet("annsofieriis", "I <3 @oliverloye #luv ", new Date(1421849702000L));
+        
         System.out.printf("This is a new Treet: %s %n", treet);
         System.out.println("The words are:");
         for (String word : treet.getWords()) {
