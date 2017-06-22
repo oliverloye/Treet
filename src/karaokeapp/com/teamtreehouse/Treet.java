@@ -5,13 +5,14 @@
  */
 package karaokeapp.com.teamtreehouse;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  *
  * @author oliverloye
  */
-public class Treet implements Comparable {
+public class Treet implements Comparable, Serializable {
     private String mAuthor;
     private String mDescription;
     private Date mCreationDate;
